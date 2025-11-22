@@ -1421,6 +1421,29 @@ footer {
 
     .case-studies-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .case-studies-grid.four-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-study-image {
+        height: 150px;
+    }
+    
+    .case-study-content {
+        padding: 20px;
+    }
+    
+    .case-study-content h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .case-study-content p {
+        font-size: 13px;
+        line-height: 1.5;
     }
 }
 
@@ -1439,8 +1462,44 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .case-studies {
+        padding: 40px 0;
+    }
+    
     .case-studies-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .case-studies-grid.four-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-study-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .case-study-image {
+        height: 180px;
+    }
+    
+    .case-study-image img {
+        padding: 15px;
+    }
+    
+    .case-study-content {
+        padding: 20px 15px;
+    }
+    
+    .case-study-content h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .case-study-content p {
+        font-size: 14px;
+        line-height: 1.6;
     }
 }
 
