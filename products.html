@@ -364,7 +364,7 @@
                             <p class="modal-desc"></p>
                             <div class="modal-actions">
                                 <div class="price modal-price"></div>
-                                <a href="https://wa.me/923270177567" class="btn btn-primary" target="_blank" rel="noopener">Contact to Buy</a>
+                                <a href="https://wa.me/923270177567" id="modalWhatsAppBtn" class="btn btn-primary" target="_blank" rel="noopener">Contact to Buy</a>
                             </div>
                         </div>
                     </div>
@@ -398,6 +398,13 @@
             }
             productModal.querySelector('.modal-rating').innerHTML = `${starsHtml} ${product.rating} (${product.reviews} reviews)`;
             productModal.querySelector('.modal-price').textContent = '$' + product.price.toFixed(2);
+            
+            // Update WhatsApp link with product details
+            const whatsappBtn = productModal.querySelector('#modalWhatsAppBtn');
+            const message = `Hi, I'm interested in:\n\n*${product.name}*${product.sku ? '\nSKU: ' + product.sku : ''}\n\nPlease send me more details.`;
+            const whatsappUrl = `https://wa.me/923270177567?text=${encodeURIComponent(message)}`;
+            whatsappBtn.href = whatsappUrl;
+            
             // focus the close button for accessibility
             modalClose.focus();
         }
